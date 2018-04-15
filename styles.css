@@ -1,0 +1,127 @@
+.container {
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+}
+ 
+.grid {
+  background-color: #444;
+  color: #fff;
+  padding: 25px;
+}
+
+.sidebar {
+  background-image: url("lighttrails.jpg");
+  background-size: cover;
+  z-index: -10;
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 1;
+  grid-row-end: 5;
+  font-size: 3rem;
+}
+
+.sidebar-blur{
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.5);
+    top: 1.5%;
+    bottom: 0;
+    left: 0.5%;
+    height: 100%;
+    width: 100%;
+    z-index: -10;
+}
+
+.top-right {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 1;
+  grid-row-end: 3;
+  background: #0f0e0e;
+  height: 265px;
+}
+
+.bottom-right {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 3;
+  grid-row-end: 5;
+  background: #0f0e0e;
+  height: 265px;
+}
+
+.converter-text{
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: -.5px;
+    text-align: left;
+    color: #fff;
+}
+
+.font-OS-Bold {
+    font-family: OpenSans-Bold,sans-serif;
+}
+
+.calculator{
+  font-family: OpenSans-Bold,sans-serif;
+  font-size: 20px;
+    font-weight: 700;
+    letter-spacing: -.5px;
+    text-align: center;
+    color: #FCFCFC;
+}
+
+.currency{
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.button {
+    background-color: #FDC254;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 18px;
+    margin: 4px 2px;
+    cursor: pointer;
+    transition-duration: 0.4s;
+}
+
+.buttonCalculate {
+  border-radius: 4px;
+  margin:auto;
+  display:block;
+}
+
+.buttonCalculate:hover {
+    color: black;
+}
+
+.buttonCalculate:focus {
+    outline: none;
+}
+
+.inlineinput2{
+  display: inline;
+}
+
+.semi-circle-text{
+    height: 300px;
+    width: 750px;
+    background-color: ;
+    font-size: 30px;
+    text-align: center;
+    border-top-left-radius: 500px; 
+    border-top-right-radius: 500px; 
+    border: 10px solid gray;
+    border-bottom: 0;
+    padding: 50px;
+}
+
+.semi-circle-text:focus {
+    outline: none;
+}

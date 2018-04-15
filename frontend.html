@@ -1,0 +1,75 @@
+<html>
+
+<head>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.23/angular.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.17.1/moment.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+
+<link rel="stylesheet" href="styles.css">
+<script src="maincontroller.js" type="text/javascript"></script>
+<script src="jquery.js" type="text/javascript"></script>
+</head>
+
+<body>
+  <div class="container" ng-app="myApp" ng-controller="formCtrl">
+    <!-- for opaque background and left side-->
+    <div class="grid sidebar">
+        <div class="sidebar-blur"></div>
+    </div>
+
+        <!-- for upper right -->
+        <div class="grid top-right">
+          <form novalidate>
+            <br><br><br><br>
+            <div class="calculator">
+              Currency
+              <span class="inlineinput">
+                <select class="currency" ng-model="currencyName" style='display: inline; width: 200px;' font-OS-bold>
+                  <option value="bitcoin">Bitcoin</option>
+                  <option value="ethereum">Ethereum</option>
+                </select>
+              </span>
+
+              Purchase Date
+              <span class="inlineinput">
+                <input ng-model="purchaseDate" type='text' id="datepicker1" style='display: inline; width: 200px;' font-OS-bold/>
+              </span>
+            </div>
+
+            <br><br>
+
+            <div class="calculator">
+              Amount
+              <span class="inlineinput">
+                <input ng-model="amount" type='text' style='display: inline; width: 200px;' font-OS-bold/>
+              </span>
+
+              Sell Date
+              <span class="inlineinput">
+                <input ng-model="sellDate" type='text' id="datepicker2" style='display: inline; width: 200px;' font-OS-bold/>
+              </span>
+            </div>
+
+          </form>
+          <br><br>
+          <button class="button buttonCalculate" ng-click="func()">Calculate</button>
+        </div>
+        
+        <!-- for lower right -->
+        <div class="grid bottom-right">
+              <span class="inlineinput2">
+                <textarea class="semi-circle-text" ng-model="result" type='text' rows="10" cols="30" readonly style='display: inline;background-color:#aaa;' font-OS-bold>
+                </textarea>
+              </span>
+
+              
+        </div>      
+  </div>
+
+</body>
+</html>
